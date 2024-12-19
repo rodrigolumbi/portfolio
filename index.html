@@ -13,12 +13,12 @@
             flex-direction: column;
         }
 
-        /* Style iframe to take up remaining space */
-        iframe {
+        /* Style object to take up full height and width */
+        object {
             flex: 1;
             width: 100%;
-            border: none;
             height: 100%;
+            border: none;
         }
 
         /* Center and style the fallback button */
@@ -46,10 +46,14 @@
 </head>
 <body>
 
-    <!-- Embed the PDF with the Google Docs viewer -->
-    <iframe src="https://docs.google.com/viewer?embedded=true&url=https://rodrigolumbi.com/Portfolio-Rodrigo-Lumbi.pdf&scale=page-fit"></iframe>
+    <!-- Embed the PDF using object tag to avoid zooming issue -->
+    <object data="https://rodrigolumbi.com/Portfolio-Rodrigo-Lumbi.pdf" type="application/pdf">
+        <p>Your browser does not support PDFs. 
+           <a href="https://rodrigolumbi.com/Portfolio-Rodrigo-Lumbi.pdf">Download the PDF</a>.
+        </p>
+    </object>
 
-    <!-- Fallback button if the PDF doesn't load -->
+    <!-- Fallback button for download -->
     <div class="fallback">
         <a href="https://rodrigolumbi.com/Portfolio-Rodrigo-Lumbi.pdf" download="Portfolio-Rodrigo-Lumbi.pdf">Download Portfolio</a>
     </div>
