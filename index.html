@@ -11,13 +11,14 @@
             margin: 0;
         }
 
-        /* Style the embed to take up full remaining space */
-        embed {
+        /* Style iframe to take up the full height of the viewport */
+        iframe {
             width: 100%;
-            height: calc(100vh - 50px); /* Adjust height to be 100% of viewport minus header */
+            height: 100vh; /* 100% of viewport height */
+            border: none;
         }
 
-        /* Style the header */
+        /* Optional: Style the header */
         h1 {
             margin: 0;
             padding: 20px;
@@ -28,9 +29,7 @@
 </head>
 <body>
     <h1>Portfolio - Rodrigo Lumbi</h1>
-    <embed 
-        src="Portfolio-Rodrigo-Lumbi.pdf" 
-        type="application/pdf">
+    <iframe src="Portfolio-Rodrigo-Lumbi.pdf"></iframe>
     <p>If the PDF does not load, <a href="Portfolio-Rodrigo-Lumbi.pdf" type="application/pdf">click here to download it.</a></p>
 </body>
 </html>
